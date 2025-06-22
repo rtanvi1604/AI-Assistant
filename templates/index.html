@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>✨ AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>💬AI Assistant</h1>
+        <form method="post">
+            <textarea name="user_input" placeholder="Enter your prompt here..." required></textarea>
+
+            <select name="function">
+                <option value="answer">Answer a Question</option>
+                <option value="summarize">Summarize Text</option>
+                <option value="creative">Generate Creative Content</option>
+            </select>
+
+            <button type="submit">✨ Generate Response</button>
+
+            {% if result %}
+                <div class="result-box">
+                    <h3>Assistant's Response:</h3>
+                    <p>{{ result }}</p>
+                    <label>Was this helpful?</label><br>
+                    <input type="radio" name="feedback" value="Yes"> Yes
+                    <input type="radio" name="feedback" value="No"> No
+                </div>
+            {% endif %}
+        </form>
+    </div>
+    <script>
+    // Auto scroll to top after form is submitted
+    if (window.location.href.includes("?")) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
