@@ -2,9 +2,6 @@
 
 A simple web-based AI Assistant built using Flask and Google Gemini API.
 
-## Live Demo
-Click here to visit my AI Assistant - [AI Assistant](https://rtanvi1604.github.io/AI-Assistant/)
-
 ## Screenshot
 ![Screenshot 2025-06-22 235727](https://github.com/user-attachments/assets/3f56fc94-3d8a-4302-b642-f12067e8ebd8)
 
